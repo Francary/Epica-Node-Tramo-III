@@ -27,3 +27,5 @@ console.log("Hola Mundo desde README")
 
 ---
 Seprarador de seeciones 
+
+ ![Como colocar una imagen](https://mdg.imgix.net/assets/images/tux.png?auto=format&fit=clip&q=40&w=100)
