@@ -9,6 +9,12 @@
 2. Programacion Asincronica con Node.js
 3. Creacion de servidor http
 
+# Clase 03
+1. Introducción a Express.js
+2. Peticiones HTTP
+3. Rutas de Servidor, Controladores, Modelo de datos, Servidor de archivos estáticos.
+4. Estructuración de proyecto. Patrón Modelo Vista Controlador (MVC)
+
 # Hola mundo
 ## Hola mundo
 ### Hola mundo
