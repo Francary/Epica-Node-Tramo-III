@@ -55,3 +55,23 @@ const getInfo = async()=>{
 getInfo()
 
 
+// Repasando el contenido de la Unidad 
+
+const fs = require ("node:fs")
+
+
+fs.readFile("archivo.txt","utf-8",(error,datos) =>{
+    if(error){
+        console.error("Error al leer el archivo: ", error);
+        return;
+    }
+    console.log("Contenido del Archivo Opcion 1:", datos )
+})
+
+fs.promises.readFile("archivo.txt","utf-8")
+    .then((datos)=>{
+        console.log("Contenido del Archivo Opcion 2:", datos )
+    })
+    .catch((error)=>{
+        console.error("Error al leer el archivo: ", error);
+    });
