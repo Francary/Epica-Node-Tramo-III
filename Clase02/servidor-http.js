@@ -2,7 +2,16 @@ const http = require ("node:http")
 const puerto = 3000
 
 const servidor = http.createServer((req , res)=>{
-    res.end("Hola desde mi servidor http")
+    if(req.url === "/"){
+        res.writeHead(200);
+        res.end("Bienvenido a la Pagina Principal")
+    }else if(req.url === "/acerca"){
+        res.writeHead(200);
+        res.end("Pagina Acerda de Mi Proyecto")
+    }else{
+        res.writeHead(404);
+        res.end("Pagina No Encontrada")
+    }
 
 })
 
