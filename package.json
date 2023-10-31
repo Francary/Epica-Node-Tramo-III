@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "nodemon": "nodemon ./clase03/src/server.js"
+    "clase03": "nodemon ./clase03/src/server.js",
+    "clase04": "nodemon ./clase04/src/server.js"
   },
   "keywords": [],
   "author": "",

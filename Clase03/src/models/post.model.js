@@ -1,6 +1,5 @@
 export {posts}
 
-
 const posts = [
     {
         title: "Argentina Programa 1.0",
