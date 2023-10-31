@@ -1,9 +1,7 @@
 export {getAllPost ,createPost, editPostParcial, editPost, deletePost}
 import{ posts } from "../models/post.model.js"
 
-
 const getAllPost = ( req, res, next) => {
-
     try {
             if(posts.length < 1){
             return res.sendStatus(204)
@@ -12,13 +10,11 @@ const getAllPost = ( req, res, next) => {
     } catch (error) {
         next("Tenemos Problemas")
     }
-
 }
+
 const createPost = (req,res, next)=>{
     const { title , contenido, image} = req.body
-
     posts.push({title,contenido,image})
-
     res.sendStatus(201)
 }
 
