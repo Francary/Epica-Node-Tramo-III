@@ -4,7 +4,6 @@ import { errorController } from "../middleware/error.js"
 
 const postRouter = Router()
 
-
 postRouter.get('/',getAllPost, errorController)
 
 postRouter.post('/',createPost)
