@@ -3,9 +3,9 @@ import  morgan from "morgan"
 import helmet from "helmet"
 import cors from "cors"
 import { postRouter } from "./routes/post.routes.js"
-// import { validarPost } from "./middleware/validar.creat.post.js"
+import { env } from "./settings/envs.js"
 
-const puerto = 3000
+
 const servidor = express()
 
 // middleware
@@ -31,5 +31,6 @@ servidor.get('/', (req , res) => {
     res.sendFile('index.html')                   
 })
 
-servidor.listen(puerto)
-console.log(`Servidor activo por puerto ${puerto}` )
+servidor.listen(env.PORT, () => {
+    console.log(`Servidor Clase 04 activo por puerto ${env.PORT}`);
+})
