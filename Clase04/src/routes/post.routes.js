@@ -1,20 +1,24 @@
 import { Router } from "express";
-import { getAllPost, createPost, editPostParcial,editPost, deletePost, } from "../controllers/controller.js"
+import { ctrlGetAllPost, createPost, editPostParcial,ctrlUpdatePostId, ctrldeletePost, ctrlGetById, } from "../controllers/controller.js"
 import { errorController } from "../middleware/error.js"
 import { validarCreatPosts } from "../validations/validations.posts.js";
-import { verificarValidaciones } from "../middleware/validar.creat.post.js";
-// import { validarPost } from "../middleware/validar.creat.post.js";
+import { verificarValidaciones } from "../middleware/verificar.validaciones.js";
+import { validarPostsById } from "../validations/validations.postsById.js";
+import { validarEditPosts } from "../validations/validations.editPosts.js";
+
 
 const postRouter = Router()
 
-postRouter.get('/',getAllPost, errorController)
+postRouter.get('/',ctrlGetAllPost, errorController)
 
-postRouter.post('/', validarCreatPosts,verificarValidaciones, createPost)
+postRouter.get('/:postId',validarPostsById,verificarValidaciones, ctrlGetById)
+
+postRouter.post('/', validarCreatPosts, verificarValidaciones, createPost)
 
 postRouter.patch('/',editPostParcial)
 
-postRouter.put('/',editPost)
+postRouter.patch('/:postId',validarEditPosts,verificarValidaciones,ctrlUpdatePostId)
 
-postRouter.delete('/',deletePost)
+postRouter.delete('/:postId',validarPostsById,verificarValidaciones,ctrldeletePost)
 
 export{postRouter}
