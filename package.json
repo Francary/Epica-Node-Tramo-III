@@ -2,11 +2,11 @@
   "name": "9.-epica",
   "version": "1.0.0",
   "description": "1. Software de Control de Versiones\r 2. Fudamentos de Git\r 3. Gitflow\r 4. Markdow",
-  "main": "./clase04/src/server.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     
-    "clase04": "nodemon ./clase04/src/server.js"
+    "clase04": "nodemon .server.js"
   },
   "keywords": [],
   "author": "",
