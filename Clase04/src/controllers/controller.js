@@ -69,5 +69,4 @@ const ctrldeletePost = (req,res)=>{
     const {postId} = req.params;
     deletePostById({id : postId})
     res.sendStatus(200)
-
 }
